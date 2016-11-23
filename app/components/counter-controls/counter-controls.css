@@ -1,0 +1,11 @@
+/** CounterControls component (app-counter-controls in the DOM) */
+
+app-counter-controls {
+  /* Box-model */
+  display: flex;
+
+  .Button ~ .Button {
+    /* Box-model */
+    margin-left: 1rem;
+  }
+}
