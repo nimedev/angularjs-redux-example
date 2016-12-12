@@ -20,15 +20,15 @@ export default (state = initialSate, action) => {
   const { type } = action
   switch (type) {
     case INCREASE:
-      return Object.assign({},
-        state,
-        { value: state.value + 1 }
-      )
+      return {
+        ...state,
+        value: state.value + 1
+      }
     case DECREASE:
-      return Object.assign({},
-        state,
-        { value: state.value - 1 }
-      )
+      return {
+        ...state,
+        value: state.value - 1
+      }
     default:
       return state
   }
