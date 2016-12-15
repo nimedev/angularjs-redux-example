@@ -7,10 +7,10 @@ import { combineReducers } from 'redux'
 import counter from './counter'
 
 const makeRootReducer = (asyncReducers?) => {
-  return combineReducers(Object.assign(
-    { counter },
-    asyncReducers
-  ))
+  return combineReducers({
+    counter,
+    ...asyncReducers
+  })
 }
 
 export const injectReducer = (store, { key, reducer }) => {
